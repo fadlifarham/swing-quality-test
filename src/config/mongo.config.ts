@@ -24,7 +24,7 @@ const config = {
 		"port": "27017"
 	},
 	"production": {
-		"username": "lanius",
+		"username": "mongo",
 		"password": "sandiaman",
 		"database": "boilerplate",
 		"host": "dryblend-mongo",

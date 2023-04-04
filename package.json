@@ -27,7 +27,7 @@
 		"import:Form": "node ./dist/scripts/importForm.js",
 		"migrate:form": "node ./dist/scripts/migrateForm.js"
 	},
-	"repository": "git@gitlab.com:mv-lanius/products/service0/boiler-plate-be-ts.git",
+	"repository": "",
 	"author": "Machine Vision <www.machinevision.global>",
 	"license": "MIT",
 	"dependencies": {
