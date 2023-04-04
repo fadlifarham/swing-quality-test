@@ -1,0 +1,8 @@
+{
+	"$schema": "https://json.schemastore.org/nodemon",
+	"ignore": ["node_modules", ".vscode"],
+	"watch": ["dist"],
+	"exec": "yarn start-dev",
+	"ext": "js",
+	"delay": 1500
+}

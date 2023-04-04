@@ -1,0 +1,75 @@
+[
+  {
+    "name": "/admin/dashboard",
+    "text": "Dashboard",
+    "role": ["ADMIN"],
+    "subs": []
+  },
+  {
+    "name": "admin/invitation",
+    "text": "Invitation",
+    "role": ["ADMIN"],
+    "subs": [
+      {
+        "name": "summary-data",
+        "text": "Summary Data",
+        "role": "",
+        "subs": []
+      },
+      {
+        "name": "wishcard-collection",
+        "text": "Wish Card Collection",
+        "role": "",
+        "subs": []
+      },
+      {
+        "name": "virtual-booth",
+        "text": "Virtual Booth",
+        "role": "",
+        "subs": []
+      },
+      {
+        "name": "trivia",
+        "text": "Trivia",
+        "role": "",
+        "subs": []
+      },
+      {
+        "name": "livestream",
+        "text": "Livestream",
+        "role": "",
+        "subs": []
+      },
+      {
+        "name": "withdraw-balance",
+        "text": "Withdraw Balance",
+        "role": "",
+        "subs": []
+      }
+    ]
+  },
+  {
+    "name": "admin/information",
+    "text": "Information",
+    "role": ["SUPERADMIN"],
+    "subs": [{
+        "name": "user-management",
+        "text": "User management",
+        "role": "",
+        "subs": []
+      },
+      {
+        "name": "report",
+        "text": "Report",
+        "role": "",
+        "subs": []
+      },
+      {
+        "name": "analytics",
+        "text": "Analytics",
+        "role": "",
+        "subs": []
+      }
+    ]
+  }
+]
