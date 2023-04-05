@@ -49,16 +49,9 @@ export default class StoreController {
       ]
     }
   )
-  public async gets(req: Request): Promise<Store[]> {
-    const { type } = req.query;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const where: any = {};
+  public async gets(): Promise<Store[]> {
 
-    if (type) where.type = type.toString().toUpperCase();
-
-    const stores = await Store.findAll({
-      where
-    });
+    const stores = await Store.findAll();
 
     return stores;
   }
