@@ -1,7 +1,6 @@
 import { Controller, Delete, Get, Post, Put } from "../decorators";
 import { Request } from "express";
 import Product from "../models/product.model";
-import { _Request } from "../interfaces";
 import { ErrorResponse, SuccessMessage } from "../utils";
 import { FindOptions, WhereOptions, Op, OrderItem, Order, Options } from "sequelize";
 
@@ -94,7 +93,7 @@ export default class ProductController {
       ]
     }
   )
-  public async gets(req: _Request): Promise<Product[]> {
+  public async gets(req: Request): Promise<Product[]> {
     const { filterBy, search, sortBy, orderBy }: RequestQueryParameter = req.query;
 
     let where: WhereOptions = {};
@@ -211,7 +210,7 @@ export default class ProductController {
       ]
     }
   )
-  public async update(req: _Request): Promise<Product> {
+  public async update(req: Request): Promise<Product> {
     const { id } = req.params;
     const input: Product = req.body;
 
@@ -250,7 +249,7 @@ export default class ProductController {
       ]
     }
   )
-  public async delete(req: _Request): Promise<SuccessMessage> {
+  public async delete(req: Request): Promise<SuccessMessage> {
     const { id } = req.params;
 
     const product = await Product.findByPk(id);

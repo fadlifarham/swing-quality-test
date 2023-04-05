@@ -1,17 +1,17 @@
 import Axios, { AxiosInstance } from "axios";
-import { _Request } from "../interfaces";
 import { envConfig } from ".";
+import { Request } from "express";
 
 const {
   SECRET_KEY
 } = envConfig;
 
-export const getBaseUrl = (req: _Request): string => {
+export const getBaseUrl = (req: Request): string => {
   const protocol = req.protocol == "http" ? "http://" : "https://";
   return `${protocol}${req.headers.host}`;
 };
 
-export const axios = (req: _Request | string): AxiosInstance => {
+export const axios = (req: Request | string): AxiosInstance => {
   let baseUrl = "";
   if (typeof req == "string") {
     baseUrl = req;

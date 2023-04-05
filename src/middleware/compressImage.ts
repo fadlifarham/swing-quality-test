@@ -1,7 +1,6 @@
 import * as Jimp from "jimp";
 import { asyncHandler, ErrorResponse } from "../utils";
-import { _Request } from "../interfaces";
-import { NextFunction, Response } from "express";
+import { NextFunction, Request, Response } from "express";
 // import * as Exif from "exif";
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const Exif = require("exif").ExifImage;
@@ -9,7 +8,7 @@ import * as fs from "fs";
 
 export const compressImage = (directory: string) => {
 	return asyncHandler(
-		async (req: _Request, res: Response, next: NextFunction) => {
+		async (req: Request, res: Response, next: NextFunction) => {
 			const filename: string = req.file.filename;
 			const mime: Array<string> = filename.split(".");
 

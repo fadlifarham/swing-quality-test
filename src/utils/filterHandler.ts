@@ -1,8 +1,8 @@
+import { Request } from "express";
 import moment from "moment";
 import {
   Op
 } from "sequelize";
-import { _Request } from "../interfaces";
 
 interface IFilterRule {
   type?: "date",
@@ -19,11 +19,11 @@ interface IFilterRule {
 
 /**
  *
- * @param req is _Request
+ * @param req is Request
  * @default limit = 20
  * @default pagination = 1
  */
-export const createFilterOptions = (req: _Request, rules: IFilterRule[]): { [field: string]: any } => {
+export const createFilterOptions = (req: Request, rules: IFilterRule[]): { [field: string]: any } => {
   const where: { [filed: string]: any } = {};
   for (const rule of rules) {
     const queries = rule.in ? req[rule.in] : req.query;

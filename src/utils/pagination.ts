@@ -1,12 +1,12 @@
-import { _Request } from "../interfaces";
+import { Request } from "express";
 
 /**
  *
- * @param req is _Request
+ * @param req is Request
  * @default limit = 20
  * @default pagination = 1
  */
-export const createPaginationOptions = (req: _Request): PaginationOptions => {
+export const createPaginationOptions = (req: Request): PaginationOptions => {
   const {
     pagination,
     limit

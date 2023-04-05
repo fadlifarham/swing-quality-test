@@ -7,7 +7,6 @@ import { swaggerSchemas } from "./models";
 import path from "path";
 import staticGzip from "express-static-gzip";
 import { ServerResponse } from "http";
-import { _Request } from "./interfaces";
 
 class App {
   public app: Application
@@ -76,7 +75,7 @@ class App {
         this.app[route.requestMethod](
           `/api/v1${prefix}${route.path}`,
           middlewares ? middlewares[0] : route.middlewares,
-          asyncHandler(async (req: _Request, res: express.Response) => {
+          asyncHandler(async (req: Request, res: express.Response) => {
             try {
               instance[route.methodName] = (...args: any) => {
                 // method decorator
@@ -118,13 +117,6 @@ class App {
                     parameterIndex,
                   } = response;
                   args[parameterIndex] = res;
-                }
-
-                for (const currentUser of currentusers) {
-                  const {
-                    parameterIndex,
-                  } = currentUser;
-                  args[parameterIndex] = req.user;
                 }
 
                 return originalMethod.apply(this, args);

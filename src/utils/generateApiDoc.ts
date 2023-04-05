@@ -113,7 +113,7 @@ export const apiDoc: any = {
   openapi: "3.0.0",
   info: {
     version: "1.0.0",
-    title: "Belovewed Backend",
+    title: "Swing Service Backend",
     description: "This starting point to develop be using TS",
     license: {
       name: "MIT",
@@ -123,23 +123,6 @@ export const apiDoc: any = {
   servers: [
     {
       url: "/api/v1"
-    }
-  ],
-  authAction: {
-    JWT: {
-      name: "JWT",
-      schema: {
-        type: "apiKey",
-        in: "header",
-        name: "Authorization",
-        description: "sda"
-      },
-      value: "Bearer <JWT>"
-    }
-  },
-  security: [
-    {
-      Bearer: [""]
     }
   ],
   paths: {},
@@ -157,12 +140,12 @@ export const apiDoc: any = {
         }
       }
     },
-    securitySchemes: {
-      Bearer: {
-        type: "http",
-        scheme: "bearer",
-        bearerFormat: "JWT"
-      }
-    }
+    // securitySchemes: {
+    //   Bearer: {
+    //     type: "http",
+    //     scheme: "bearer",
+    //     bearerFormat: "JWT"
+    //   }
+    // }
   }
 };

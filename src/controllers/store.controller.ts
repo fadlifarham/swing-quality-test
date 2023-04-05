@@ -1,7 +1,6 @@
 import { Controller, Delete, Get, Post, Put } from "../decorators";
 import { Request } from "express";
 import Store from "../models/store.model";
-import { _Request } from "../interfaces";
 import { ErrorResponse, SuccessMessage } from "../utils";
 
 @Controller("/stores")
@@ -24,7 +23,7 @@ export default class StoreController {
       request: "NewStore"
     }
   )
-  public async create(req: _Request): Promise<Store> {
+  public async create(req: Request): Promise<Store> {
     const input: Store = req.body;
 
     const store = await Store.create(input);
@@ -125,7 +124,7 @@ export default class StoreController {
       ]
     }
   )
-  public async update(req: _Request): Promise<Store> {
+  public async update(req: Request): Promise<Store> {
     const { id } = req.params;
     const input: Store = req.body;
 
@@ -164,7 +163,7 @@ export default class StoreController {
       ]
     }
   )
-  public async delete(req: _Request): Promise<SuccessMessage> {
+  public async delete(req: Request): Promise<SuccessMessage> {
     const { id } = req.params;
 
     const store = await Store.findByPk(id);
