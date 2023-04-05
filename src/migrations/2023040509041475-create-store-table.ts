@@ -1,9 +1,9 @@
-import { QueryInterface, DataTypes } from "sequelize";
+import { QueryInterface } from "sequelize";
 import Store from "../models/store.model";
 
 export const up = async (query: QueryInterface): Promise<void> => {
 	try {
-		return Store.createTable(query);
+		return await Store.createTable(query);
 	} catch (error) {
 		return Promise.reject(error);
 	}
