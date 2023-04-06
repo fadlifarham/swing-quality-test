@@ -2,7 +2,7 @@ import { Controller, Delete, Get, Post, Put } from "../decorators";
 import { Request } from "express";
 import Product from "../models/product.model";
 import { ErrorResponse, SuccessMessage } from "../utils";
-import { FindOptions, WhereOptions, Op, OrderItem, Order, Options } from "sequelize";
+import { WhereOptions, Op, Order } from "sequelize";
 
 interface RequestQueryParameter {
   filterBy?: string;

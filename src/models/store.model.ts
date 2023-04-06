@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-types */
 import {
 	Optional,
 	Sequelize,
@@ -38,7 +37,9 @@ export class Store extends BaseModel<StoreAttributes, StoreCreationAttributes>
 	public readonly updatedAt!: Date;
 	public readonly deletedAt!: Date;
 
-	public static associations: {};
+	public static associations: {
+		
+	};
 
 	public static setAssociation(): void { }
 	

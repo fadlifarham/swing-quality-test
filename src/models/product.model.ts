@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-types */
 import { Optional, Sequelize, DataTypes, QueryInterface, ModelAttributes, Association } from "sequelize";
 import { BaseModel } from "../utils";
 
