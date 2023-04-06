@@ -1,49 +1,20 @@
 ### Project Description
-Isi deskripsi project
-
-### Must Know
-Hal-hal yang perlu dipelajari sebelum memulai project:
-
-* [Contoh Materi](https://google.com) - Penjelasan singkat
-
-### Technology Stack
-Berikut teknologi (plugins / modules) yang dipakai pada project ini:
-* Express JS 
-
-### Pre-Installation Tutorial
-Berikut hal-hal yang perlu di install sebelum memulai project:
-* Chrome Browser
+This is project for quality test code at swing
 
 ### Installation Tutorial
-Berikut cara instalasi project
+Here's how to install the project
 
 ```sh
-$ cd project-dir
-$ yarn install
+$ cd swing-quality-test
+$ npm run instal
+$ npm run build
+$ npm run dev
 ```
 
-### Development Mode
-Berikut cara menjalankan project dalam mode development
-
-*) Ubah nama file .env.example ke .env
-```sh
-$ cd project-dir
-$ yarn dev
-```
-
-### Production Mode
-Berikut cara menjalankan project dalam mode development
+### Access Documentation
+There is project documentation that uses swagger, by accessing this url:
 
 ```sh
-$ cd project-dir
-$ yarn start
+http://localhost:4000/explorer
 ```
 
-### Most used commands
-Berikut ini perintah-perintah yang sering dipakai:
-
-Clear Node Modules
-```sh
-$ cd project-dir
-$ yarn clean
-```
