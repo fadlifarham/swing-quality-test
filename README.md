@@ -8,6 +8,7 @@ Here's how to install the project
 $ cd swing-quality-test
 $ npm run instal
 $ npm run build
+$ npm run migrate
 $ npm run dev
 ```
 
