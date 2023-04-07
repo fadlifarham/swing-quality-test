@@ -4,8 +4,6 @@ import { RouteDefinition } from "./interfaces/RouteDefinition.interface";
 import { asyncHandler, errorResponse, successResponse, isSuccessMsg, SuccessMessage } from "./utils";
 import { apiDoc } from "./utils/generateApiDoc";
 import { swaggerSchemas } from "./models";
-import path from "path";
-import staticGzip from "express-static-gzip";
 import { ServerResponse } from "http";
 
 class App {
@@ -70,7 +68,6 @@ class App {
         const queries = Reflect.getMetadata("query", instance, route.methodName) || [];
         const requests = Reflect.getMetadata("request", instance, route.methodName) || [];
         const responses = Reflect.getMetadata("response", instance, route.methodName) || [];
-        const currentusers = Reflect.getMetadata("current-user", instance, route.methodName) || [];
         const originalMethod = instance[route.methodName];
         this.app[route.requestMethod](
           `/api/v1${prefix}${route.path}`,
